@@ -35,7 +35,7 @@ document.querySelector('#add-team-btn').addEventListener('click', function(){
     let position = document.querySelector('#team-position').value;
     let played = document.querySelector('#team-played').value;
 
-    fetch('http://127.0.0.1:5000/api/add-team', {
+    fetch('https://web-production-03dfe.up.railway.app/api/add-team', {
         method : 'POST',
         headers : {'Content-Type' : 'application/json'},
         body : JSON.stringify([{
@@ -82,7 +82,7 @@ document.querySelector('#add-player-btn').addEventListener('click', function(){
     economy: economy
 })
 
-    fetch('http://127.0.0.1:5000/api/add-players', {
+    fetch('https://web-production-03dfe.up.railway.app/api/add-players', {
         method : 'POST',
         headers : {'Content-Type' : 'application/json'},
         body : JSON.stringify([{
@@ -116,7 +116,7 @@ document.querySelector('#add-match-btn').addEventListener('click', function(){
     let status = document.querySelector('#match-status').value;
     let result = document.querySelector('#match-result').value;
 
-    fetch('http://127.0.0.1:5000/api/add-matches', {
+    fetch('https://web-production-03dfe.up.railway.app/api/add-matches', {
         method : 'POST',
         headers : {'Content-Type' : 'application/json'},
         body : JSON.stringify([{
@@ -138,7 +138,7 @@ document.querySelector('#add-match-btn').addEventListener('click', function(){
 })
 
 function loadTeams(){
-    fetch('http://127.0.0.1:5000/api/teams')
+    fetch('https://web-production-03dfe.up.railway.app/api/teams')
         .then(response => response.json())
         .then(teams => {
             let select = document.querySelector('#player-team-id')
@@ -150,7 +150,7 @@ function loadTeams(){
 loadTeams()
 
 function loadTeamList(){
-    fetch('http://127.0.0.1:5000/api/teams')
+    fetch('https://web-production-03dfe.up.railway.app/api/teams')
     .then(response => response.json())
     .then(teams => {
         let html = ''
@@ -166,7 +166,7 @@ function loadTeamList(){
 loadTeamList()
 
 function deleteTeam(id){
-    fetch(`http://127.0.0.1:5000/api/delete-team/${id}`,{
+    fetch(`https://web-production-03dfe.up.railway.app/api/delete-team/${id}`,{
         method : 'DELETE'
     })
     .then(response => response.json())
@@ -178,7 +178,7 @@ function deleteTeam(id){
 
 
 function loadPlayerList(){
-    fetch('http://127.0.0.1:5000/api/players')
+    fetch('https://web-production-03dfe.up.railway.app/api/players')
     .then(response => response.json())
     .then(players => {
         let html = ''
@@ -194,7 +194,7 @@ function loadPlayerList(){
 loadPlayerList()
 
 function deletePlayer(id){
-    fetch(`http://127.0.0.1:5000/api/delete-player/${id}`,{
+    fetch(`https://web-production-03dfe.up.railway.app/api/delete-player/${id}`,{
         method : 'DELETE'
     })
     .then(response => response.json())
@@ -206,7 +206,7 @@ function deletePlayer(id){
 
 
 function loadMatchList(){
-    fetch('http://127.0.0.1:5000/api/matches')
+    fetch('https://web-production-03dfe.up.railway.app/api/matches')
     .then(response => response.json())
     .then(matches => {
         let html = ''
@@ -222,7 +222,7 @@ function loadMatchList(){
 loadMatchList()
 
 function deleteMatch(id){
-    fetch(`http://127.0.0.1:5000/api/delete-match/${id}`,{
+    fetch(`https://web-production-03dfe.up.railway.app/api/delete-match/${id}`,{
         method : 'DELETE'
     })
     .then(response => response.json())

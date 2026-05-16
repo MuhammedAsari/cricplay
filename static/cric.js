@@ -15,7 +15,7 @@ tabs.forEach(tab =>{
 })
 
 function renderMatches(){
-    fetch('http://127.0.0.1:5000/api/matches')
+    fetch('https://web-production-03dfe.up.railway.app/api/matches')
          .then(response => response.json())
          .then(matches =>{
             let html = '';
@@ -45,7 +45,7 @@ function renderMatches(){
 renderMatches();
 
 function renderBatters(){
-    fetch('http://127.0.0.1:5000/api/players')
+    fetch('https://web-production-03dfe.up.railway.app/api/players')
         .then(response => response.json())
         .then(players =>{
             let batters = players.filter(p =>
@@ -73,7 +73,7 @@ function renderBatters(){
 renderBatters();
 
 function renderBowlers(){
-    fetch('http://127.0.0.1:5000/api/players')
+    fetch('https://web-production-03dfe.up.railway.app/api/players')
         .then(response => response.json())
         .then(players =>{
             let bowlers = players.filter(p =>
@@ -101,7 +101,7 @@ function renderBowlers(){
 renderBowlers();
 
 function renderPlayers(){
-    fetch('http://127.0.0.1:5000/api/players')
+    fetch('https://web-production-03dfe.up.railway.app/api/players')
         .then(response => response.json())
         .then(players =>{
             let html = '';
@@ -138,7 +138,7 @@ function renderPlayers(){
 renderPlayers();
 
 function renderRankings(){
-    fetch('http://127.0.0.1:5000/api/teams')
+    fetch('https://web-production-03dfe.up.railway.app/api/teams')
         .then(response => response.json())
         .then(teams => {
             let html = '';
