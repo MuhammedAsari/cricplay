@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Cricket Tournament</title>
+    <link rel="stylesheet" href="/static/cric.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <span class="cric">CRIC</span><span class="play">PLAY</span>
+        </div>
+
+        <div class="nav-tabs">
+            <button class="tab active" data-tab="live-score">Live Scores</button>
+            <button class="tab" data-tab="batting">Batting</button>
+            <button class="tab" data-tab="bowling">Bowling</button>
+            <button class="tab" data-tab="players">Players</button>
+            <button class="tab" data-tab="rankings">Rankings</button>
+        </div>
+    </nav>
+
+    <div class="live-banner">
+        <div class="live">
+            <span></span>Live
+        </div>
+
+        <div class="live-match">
+            <strong id="team1">MI vs CSk</strong>
+            — <span id="tournament-name">LCT</span> <span id="year">2025</span> · Match <span id="match-number">38</span> · <span id="stadium-name">Wankhede Stadium</span>
+        </div>
+
+        <div class="live-score">
+            <span id="current-score">187</span>/<span id="live-out">4</span>
+            <span id="live-over">16.3</span>
+        </div>
+    </div>
+
+    <div class="main">
+        <section class="section active" id="live-score">
+            <h2>Live & Recent Scores</h2>
+            <div class="score-grid" id="score-grid"></div>
+        </section>
+
+        <section class="section" id="batting">
+            <h2>Batting Stats</h2>
+
+            <div class="stats-table-wrap">
+                <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Player</th>
+                        <th>Team</th>
+                        <th>Runs</th>
+                        <th>Mat</th>
+                        <th>Avg</th>
+                        <th>SR</th>
+                        <th>50s</th>
+                        <th>100s</th>
+                    </tr>
+                </thead>
+                <tbody id="bat-body">
+                    
+                </tbody>
+            </table>
+            </div>
+        </section>
+
+        <section class="section" id="bowling">
+            <h2>Bowling Stats</h2>
+
+            <div class="stats-table-wrap">
+                <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Player</th>
+                        <th>Team</th>
+                        <th>Wkt</th>
+                        <th>Mat</th>
+                        <th>Overs</th>
+                        <th>Runs</th>
+                        <th>Avg</th>
+                        <th>Eco</th>
+                    </tr>
+                </thead>
+                <tbody id="bowl-body">
+                    
+                </tbody>
+            </table>
+            </div>
+        </section>
+
+        <section class="section" id="players">
+            <h2>Player Profile</h2>
+
+            <div id="player-grid"></div>
+        </section>
+
+        <section class="section" id="rankings">
+            <h2>TCL <span id="standing-year">2025</span> Standings</h2>
+
+            <div class="stats-table-wrap">
+                <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Team</th>
+                        <th>P</th>
+                        <th>W</th>
+                        <th>L</th>
+                        <th>Pts</th>
+                        <th>NRR</th>
+                        <th>Form</th>
+                    </tr>
+                </thead>
+                <tbody id="rank-body">
+                    
+                </tbody>
+            </table>
+            </div>
+        </section>
+    </div>
+
+    <script src="/static/cric.js"></script>
+</body>
+</html>

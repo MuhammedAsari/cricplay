@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/cric.css">
+</head>
+<body>
+    <div id="login-section">
+        <h1>Admin Login</h1>
+        <input id="password-input" type="password" placeholder="password">
+        <button id="login-btn">Login</button>
+        <p id="error-msg" style="display: none;">Password Is Wrong</p>
+    </div>
+
+    <div id="dashboard-section" style="display: none;">
+        <h1>Admin Dashboard</h1>
+
+        <div id="admin-tabs">
+            <button class="admin-tab" data-tab="teams">Teams</button>
+            <button class="admin-tab" data-tab="players">players</button>
+            <button class="admin-tab" data-tab="matches">matches</button>
+        </div>
+
+        <div id="admin-content">
+            <section class="admin-section" id="teams">
+                <h2>Add Teams</h2>
+
+                <input type="text" id="team-name" placeholder="Team Name">
+                <input type="number" id="team-won" placeholder="Won">
+                <input type="number" id="team-lost" placeholder="Lost">
+                <input type="number" id="team-points" placeholder="Points">
+                <input type="number" id="team-nrr" placeholder="NRR">
+                <input type="number" id="team-position" placeholder="Position">
+                <input type="number" id="team-played" placeholder="Played">
+
+                <button id="add-team-btn">Add Team</button>
+
+                <h3>Existing Teams</h3>
+                <div id="teams-list"></div>
+            </section>
+
+            <section class="admin-section" id="players">
+                <h2>Add Players</h2>
+
+                <input type="text" id="player-name" placeholder="player Name">
+                <select id="player-team-id">
+                    <option value="">Select Team</option>
+                </select>
+                <input type="text" id="player-role" placeholder="Role">
+                <input type="number" id="player-matches" placeholder="Matches">
+                <input type="number" id="player-runs" placeholder="Runs">
+                <input type="number" id="player-avg" placeholder="Avg">
+                <input type="number" id="player-sr" placeholder="Strike Rate">
+                <input type="number" id="player-fifties" placeholder="Fifties">
+                <input type="number" id="player-hundreds" placeholder="Hundreds">
+                <input type="number" id="player-wickets" placeholder="Wickets">
+                <input type="number" id="player-economy" placeholder="Economy">
+
+                <button id="add-player-btn">Add Player</button>
+
+                <h3>Existing Players</h3>
+                <div id="players-list"></div>
+            </section>
+
+            <section class="admin-section" id="matches">
+                <h2>Add Matches</h2>
+
+                <input type="number" id="match-match-number" placeholder="match Number">
+                <input type="text" id="match-team1" placeholder="Team1">
+                <input type="text" id="match-team2" placeholder="Team2">
+                <input type="text" id="match-score1" placeholder="Score1">
+                <input type="text" id="match-score2" placeholder="Score2">
+                <input type="text" id="match-overs1" placeholder="Overs1">
+                <input type="text" id="match-overs2" placeholder="Overs2">
+                <input type="text" id="match-status" placeholder="Status">
+                <input type="text" id="match-result" placeholder="Result">
+
+                <button id="add-match-btn">Add match</button>
+
+                <h3>Existing Matches</h3>
+                <div id="matches-list"></div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="/static/admin.js"></script>
+</body>
+</html>
